@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta charset="UTF-8">
+		<title>Portfolio Page</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<!--<link href='https://fonts.googleapis.com/css?family=SecularOne' rel='stylesheet'>-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<section id="navbar-section">
+			<nav id="navbar">
+				<ul>
+					<a href="#welcome-section"><li>Home</li></a>
+					<a href="#projects"><li>Projects</li></a>
+					<a href="#contact-section"><li>Contact</li></a>
+				</ul>
+			</nav>
+		</section>
+		<section id="welcome-section">
+			<h1>Namaste! I am Rohan</h1>
+			<p>A web application developer</p>
+		</section>
+		<section id="projects">
+			<h1>Projects</h1>
+			<div class="slide-show-container">
+				<a class="prev" onclick="plusSlides(-1)">&#10094</a>
+				<div id="proj1" class="project-tile fade" onmouseenter="displayButton(0)" onmouseleave="removeButton(0)">
+					<div class="flex1">
+						<div>
+							<img class="card-img" src="Proj4.png">
+						</div>
+						<div class="card-desc-text">
+							<h2>Technical Documentation Page</h2>
+							<div class="card-p-div">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+							</div>
+						</div>
+					</div>
+					<div class="card-button-div">
+						<a href="https://codepen.io/RoSh-23/full/xxgMzJq" target="_blank">
+							<button class="card-button">See</button>
+						</a>
+					</div>
+				</div>
+				<div id="proj2" class="project-tile fade" onmouseenter="displayButton(1)" onmouseleave="removeButton(1)">
+				<div class="flex1">
+					<div>
+						<img class="card-img" src="Proj1.png">
+					</div>
+					<div class="card-desc-text">
+						<h2>Tribute Page</h2>
+						<div class="card-p-div">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+						</div>
+					</div>
+				</div>
+				<div class="card-button-div">
+					<a href="https://codepen.io/RoSh-23/full/bGpKpjN" target="_blank">
+						<button class="card-button">See</button>
+					</a>
+				</div>
+				</div>
+				<div id="proj3" class="project-tile fade" onmouseenter="displayButton(2)" onmouseleave="removeButton(2)">
+					<div class="flex1">
+						<div>
+							<img class="card-img" src="Proj2.png">
+						</div>
+						<div class="card-desc-text">
+							<h2>Survey Page</h2>
+							<div class="card-p-div">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+							</div>
+						</div>
+					</div>
+					<div class="card-button-div">
+						<a href="https://codepen.io/RoSh-23/full/rNeqmoV" target="_blank">
+							<button class="card-button">See</button>
+						</a>
+					</div>
+				</div>
+				<div id="proj4" class="project-tile fade" onmouseenter="displayButton(3)" onmouseleave="removeButton(3)">
+					<div class="flex1">
+						<div>
+							<img class="card-img" src="Proj3.png">
+						</div>
+						<div class="card-desc-text">
+							<h2>Product Landing Page</h2>
+							<div class="card-p-div">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+							</div>
+						</div>
+					</div>
+					<div class="card-button-div">
+						<a href="https://codepen.io/RoSh-23/full/BaQQWKg" target="_blank">
+							<button class="card-button">See</button>
+						</a>
+					</div>
+				</div>
+				<a class="next" onclick="plusSlides(1)">&#10095</a>
+				</div>
+			<div id="dots-div">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+				<span class="dot" onclick="currentSlide(4)"></span>
+			</div>
+		</section>
+		<section id="contact-section">
+				<h2>Let's Work Together...</h2>
+				<h1>Connect with me</h1>
+			<div id="pro-links">
+				<a id="profile-link" href="https://twitter.com/freecodecamp" class="fa fa-twitter" target="_blank"></a>
+				<a href="https://github.com/freecodecamp" class="fa fa-github" target="_blank"></a>
+				<a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" class="fa fa-youtube" target="_blank"></a>
+				<a href="mailto:example@example.com" class="fa fa-envelope-o"></a>
+			</div>
+			<footer>
+				<h3>*This is a fake/sample portfolio</h3>
+			</footer>
+		</section>
+	</body>
+	<script type="text/javascript">
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n)
+		{
+			showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n)
+		{
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n)
+		{
+			var i;
+			var slides = document.getElementsByClassName("project-tile");
+			var dots = document.getElementsByClassName("dot");
+			if(n > slides.length)
+			{
+				slideIndex = 1;
+			}
+			if(n < 1)
+			{
+				slideIndex = slides.length;
+			}
+			for(i = 0; i < slides.length; i++)
+			{
+				slides[i].style.display = "none";
+			}
+			for(i = 0; i < dots.length; i++)
+			{
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";	
+		}
+
+		var buttons = document.getElementsByClassName("card-button-div");
+
+		function displayButton(k)
+		{	
+			if(buttons[k].classList.contains("card-button-rem"))
+				buttons[k].classList.remove("card-button-rem");
+			buttons[k].classList.add("card-button-display");
+		}
+
+		function removeButton(k)
+		{
+			buttons[k].classList.add("card-button-rem");
+		}
+	</script>
+	<style type="text/css">
+		.fa{
+			padding: 15px;
+			font-size: 30px;
+			width: 60px;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 50%;
+			background-color: #001a66;
+			color: #e6ecff;
+			margin: 15px;
+		}
+		.fa:hover{
+			opacity: 0.7;
+		}
+		@media all and (max-width: 485px){
+			.fa{
+				padding: 7.5px;
+				font-size: 15px;
+				width: 30px;
+				text-align: center;
+				text-decoration: none;
+				border-radius: 50%;
+				background-color: #001a66;
+				color: #e6ecff;
+				margin: 7.5px;
+			}	
+		}
+	</style>
+</html>

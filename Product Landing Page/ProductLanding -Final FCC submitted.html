@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Product Landing Page</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<header id = "header">
+	<img id= "header-img" src="https://dynamic.brandcrowd.com/asset/logo/2ab5f95d-b872-4b44-b7c0-0f7012f1750c/logo?v=4" alt="company logo">
+	<nav id="nav-bar">
+		<ul>
+			<li><a class="nav-link" href="#Features">Features</a></li>
+			<li><a class="nav-link" href="#How-it-works">How it Works</a></li>
+			<li><a class="nav-link" href="#Pricing">Pricing</a></li>
+			<li><a class="nav-linl" href="#Contact-info">Contact</a></li>
+		</ul>
+	</nav>
+  <h1>M Tel Beds - Foldable Beds Company</h1>
+</header>
+<body>
+<section id="Features">
+<br> 
+	<h2>Features</h2>
+<br>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</section>
+<br>
+<section id="How-it-works">
+<br>
+	<h2>How it Works</h2>
+<br>
+<div id="video-div">
+		<iframe id="video" width=50% height="400" src="https://www.youtube.com/embed/5S4JlrPRsdk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+		</iframe>
+</div>
+</section>
+<section id="Pricing">
+<br>
+	<h2>Pricing</h2>
+<br>
+<div id="product-cards">
+	<div class="cards" id="card-prod1">
+		<img class="card-img" src="https://5.imimg.com/data5/HA/SX/MY-39075853/designer-wall-folding-bed-500x500.jpg">
+		<h2>Model 001</h2>
+		<p class="price">$500.99</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+	<div class="cards" id="card-prod2">
+		<img class="card-img" src="https://ii1.pepperfry.com/media/catalog/product/e/d/568x625/edison-folding-bed-in-black---maroon-colour-by-aura-edison-folding-bed-in-black---maroon-colour-by-a-1affai.jpg">
+		<h2>Model 002</h2>
+		<p class="price">$600.99</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+	<div class="cards" id="card-prod3">
+		<img class="card-img" src="https://5.imimg.com/data5/AI/KY/MY-23565565/wooden-folding-bed-500x500.jpg">
+		<h2>Model 003</h2>
+		<p class="price">$450.99</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+</div>
+</section>
+<section id="Contact-info">
+<br>
+	<h2>Contact</h2>
+<br>
+	<form id="form" action="https://www.freecodecamp.com/email-submit">
+		<label id="email-label" for="email">Email:</label>
+		<br>
+		<input id="email" type="email" name="email" form="form" placeholder="Enter your email id">
+		<br>
+		<input id="submit" type="submit" name="submit" value ="Submit">	
+	</form>
+</section>
+</body>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background-color: #24252A;
+	font-family: "Montserrat", sans-serif;
+	color: white;
+}
+
+
+#video-div{
+	text-align: center;
+}
+
+#header-img{
+  top: 5;  
+}
+
+p{
+	text-align: center;
+}
+
+h1, h2{
+	text-align: center;
+	color: #80bfff;
+}
+
+li, a{
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: #edf0f1;
+	text-decoration: none;
+}
+
+nav{
+	order: 1;
+}
+
+header{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 30px 10%;
+}
+
+ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+#header-img{
+	cursor: pointer;
+	height: 70px;
+	width: 70px;
+	margin-right: auto;
+}
+
+#nav-bar{
+  position: fixed;
+  top: 0;
+}
+
+.nav-link{
+	list-style: none;
+}
+
+.nav-link{
+	display: inline-block;
+	padding:  0px 20px;
+}
+
+nav ul li:nthchild(1){
+	padding: 0 20px 0 0;
+}
+
+nav ul li a{
+	transition: all 0.3s ease 0s;
+}
+
+nav ul li a:hover{
+	color: #0088a9;
+}
+
+#email{
+	width: 30%;
+	height: 30px;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	margin: 8px 0;
+	border: 2px solid #6666ff;
+	border-radius: 4px;
+	background-color: #f1f1f1;
+}
+
+#submit{
+	width: 20%;
+	height: 30px;
+	padding: 1px 1px;
+	box-sizing: border-box;
+	margin: 8px 0 20px;
+	background-color: #f1f1f1;
+	border:  2px solid #6666ff;
+	color: black;
+}
+
+#form{
+	text-align: center;
+}
+
+#product-cards{
+	display: flex;
+	justify-content: space-between;
+}
+
+.price{
+	color: grey;
+	font-size: 22px;
+}
+
+.cards{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	max-width: 300px;
+	margin: auto;
+	text-align: center;
+	font-family: arial;
+}
+
+.card-img{
+	max-width: 300px;
+	margin: auto;
+	text-align: center;
+	border: 3px solid black;
+}
+
+@media all and (max-width: 800px){
+	#product-cards{
+		flex-direction: column;
+	}
+}
+
+@media all and (max-width: 450px){
+	#video{
+		height: 200px;
+	}
+  h1{
+    font-size: 25px;
+  }
+}
+
+
+</style>
+</html>
+
+
+
+

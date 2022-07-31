@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie = edge">
+        <title>C Technical Documentation Page</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    	<div id="menu-button" onclick="menuButtonFuncToggle(this)">
+    		<div class="menu-button-bar bar1"></div>
+    		<div class="menu-button-bar bar2"></div>
+    		<div class="menu-button-bar bar3"></div>
+    	</div>
+        <nav id="navbar">
+            <header id="navbar-header"><a href="#main-doc">C Programming Documentation</a></header>
+            <a class="nav-link" href="#Introduction">Introduction</a>
+            <a class="nav-link" href="#Namaste_World">Namaste World</a>
+            <a class="nav-link" href="#Data_Types">Data Types</a>
+            <a class="nav-link" href="#Variables">Variables</a>
+            <a class="nav-link" href="#Conditional_Statements">Conditional Statements</a>
+            <a class="nav-link" href="#Loops">Loops</a>
+            <a class="nav-link" href="#Functions">Functions</a>
+        </nav>
+        <main id = "main-doc">
+            <h1>C Documentation Page</h1>
+            <section class="main-section" id="Introduction">
+                <header>Introduction</header>
+                <p>C is a powerful general-purpose programming language. It can be used to develop software like operating systems, databases, compilers, and so on. C programming is an excellent language to learn to program for beginners.</p>
+                <p>A successor to the programming language B, C was originally developed at Bell Labs by Dennis Ritchie between 1972 and 1973 to construct utilities running on Unix. </p>
+            </section>
+            <section class="main-section" id="Namaste_World">
+                <header>Namaste World</header>
+                <p>To get started with writing C, open your code blocks IDE and write your first "Namaste World" C code:</p>
+                <pre>
+                    <code>
+ #include &lt;stdio.h&gt;
+  int main()
+  {
+      /* my first program in C */
+      printf("Namaste, World! \n");
+
+      return 0;
+  }
+                    </code>
+                </pre>
+                <p>You will see the following as output: </p>
+                <pre>
+                    <samp>
+  Namaste, World!
+
+  Process returned 0 (0x0)   execution time : 0.156 s
+  Press any key to continue.
+                    </samp>
+                </pre>
+                <p>In any C program you have to include some library which contains the declarations of the functions used in the program here we have used <code>printf()</code>. We will discuss about it more later.</p>
+            </section>
+            <section class="main-section" id="Data_Types">
+                <header>Data Types</header>
+                <p>Data types in c refer to an extensive system used for declaring variables or functions of different types. The type of a variable determines how much space it occupies in storage and how the bit pattern stored is interpreted.</p>
+                <p>ANSI C provides three types of data types:</p>
+                <ol>
+                    <li>Primary(Built-in) Data Types</li>
+                        <ol type="i">
+                            <li>int</li>
+                            <li>char</li>
+                            <li>float</li>
+                            <li>double</li>
+                            <li>void</li>
+                        </ol>
+                    <li>Derived Data Types</li>
+                        <ol type="i">
+                            <li>pointer</li>
+                            <li>arrays</li>
+                        </ol>
+                    <li>User Defined Data Types</li>
+                        <ol type="i">
+                            <li>struct</li>
+                            <li>union</li>
+                        </ol>
+                </ol>
+                <div id="table-div">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Storage Size</th>
+                            <th>Value Range</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>char</td>
+                        <td>1 byte</td>
+                        <td>-128 to 127 or 0 to 255</td>
+                    </tr>
+                    <tr>
+                        <td>unsigned char</td>
+                        <td>1 byte</td>
+                        <td>0 to 255</td>
+                    </tr>
+                    <tr>
+                        <td>signed char</td>
+                        <td>1 byte</td>
+                        <td>-128 to 127</td>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>2 or 4 bytes</td>
+                        <td>-32,768 to 32,767 or -2,147,483,648 to 2,147,483,647</td>
+                    </tr>
+                    <tr>
+                        <td>unsigned int</td>
+                        <td>2 or 4 bytes</td>
+                        <td>0 to 65,535 or 0 to 4,294,967,295</td>
+                    </tr>
+                    <tr>
+                        <td>short</td>
+                        <td>2 bytes</td>
+                        <td>-32,768 to 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>unsigned short	</td>
+                        <td>2 bytes</td>
+                        <td>0 to 65,535</td>
+                    </tr>
+                    <tr>
+                        <td>long</td>
+                        <td>8 bytes or (4bytes for 32 bit OS)</td>
+                        <td>-9223372036854775808 to 9223372036854775807</td>
+                    </tr>
+                    <tr>
+                        <td>unsigned long</td>
+                        <td>8 bytes</td>
+                        <td>0 to 18446744073709551615</td>
+                    </tr>
+                    <tr>
+                        <td>float	</td>
+                        <td>4 byte</td>
+                        <td>1.2E-38 to 3.4E+38</td>
+                    </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>8 byte</td>
+                        <td>2.3E-308 to 1.7E+308</td>
+                    </tr>
+                </table>
+                </div>
+                <h4>This is how we use data types:</h4>
+                    <pre>
+                        <code>
+ int id, age;
+ char test = 'h';
+ float salary;
+ double price;
+                        </code>
+                    </pre>
+                <h4>A simple program to display the size of data types:</h4>
+                    <pre>
+                        <code>
+ #include &lt;stdio.h&gt;
+ int main()
+ {
+     short a;
+     long b;
+     long long c;
+     long double d;
+
+     printf("size of short = %d bytes\n", sizeof(a));
+     printf("size of long = %d bytes\n", sizeof(b));
+     printf("size of long long = %d bytes\n", sizeof(c));
+     printf("size of long double= %d bytes\n", sizeof(d));
+
+     return 0;
+ }
+                        </code>
+                    </pre>
+            </section>
+            <section class="main-section" id="Variables">
+                <header>Variables</header>
+                <p>In programming, a variable is a container (storage area) to hold data.
+
+                To indicate the storage area, each variable should be given a unique name (identifier). Variable names are just the symbolic representation of a memory location. For example:</p>
+                <code>int playerScore = 95;</code>
+                <p>Here, <code>playerScore</code> is a variable of <code>int</code> type. Here, the variable is assigned an integer value <code>95</code>.
+
+                The value of a variable can be changed, hence the name variable.</p>
+                <p>C is a strongly typed language. This means that the variable type cannot be changed once it is declared</p>
+                <p>The general method of declaring variable is:</p>
+                <code>type variable_name = value;</code>
+                <h4>Rules for naming a variable:</h4>
+                <ol>
+                    <li>A variable name can only have letters (both uppercase and lowercase letters), digits and underscore.</li>
+                    <li>The first letter of a variable should be either a letter or an underscore.</li>
+                    <li>There is no rule on how long a variable name (identifier) can be. However, you may run into problems in some compilers if the variable name is longer than 31 characters.</li>
+                </ol>
+                <h4>An Example is given below:</h4>
+                    <pre>
+                        <code>
+ #include &lt;stdio.h&gt;
+
+ // Variable declaration:
+ extern int a, b;
+ extern int c;
+ extern float f;
+
+ int main ()
+ {
+
+     /* variable definition: */
+     int a, b;
+     int c;
+     float f;
+
+     /* actual initialization */
+     a = 10;
+     b = 20;
+
+     c = a + b;
+     printf("value of c : %d \n", c);
+
+     f = 70.0/3.0;
+     printf("value of f : %f \n", f);
+
+     return 0;
+ }
+                        </code>
+                    </pre>
+            </section>
+            <section class="main-section" id="Conditional_Statements">
+                <header>Conditional Statements</header>
+                <p>Decision making structures require that the programmer specifies one or more conditions to be evaluated or tested by the program, along with a statement or statements to be executed if the condition is determined to be true, and optionally, other statements to be executed if the condition is determined to be false.</p>
+                <h4>The control flow statements are of following type:</h4>
+                <ol>
+                    <li>if statement</li>
+                    <li>if...else statement</li>
+                    <li>nested if statements</li>
+                    <li>switch statement</li>
+                    <li>The ? : Operator</li>
+                </ol>
+                <h4>The syntax of the if statement in C programming is:</h4>
+                    <pre>
+                        <code>
+ if (test expression)
+ {
+ // code
+ }
+                        </code>
+                    </pre>
+                <h4>An example is as follows:</h4>
+                    <pre>
+                        <code>
+ // Check whether an integer is odd or even
+
+ #include &lt;stdio.h&gt;
+ int main() {
+     int number;
+     printf("Enter an integer: ");
+     scanf("%d", &number);
+
+     // True if the remainder is 0
+     if  (number%2 == 0) {
+         printf("%d is an even integer.",number);
+     }
+     else {
+         printf("%d is an odd integer.",number);
+     }
+
+     return 0;
+ }
+                        </code>
+                    </pre>
+                <h4>Output is:</h4>
+                    <pre>
+                        <samp>
+ Enter an integer: 7
+ 7 is an odd integer.
+                        </samp>
+                    </pre>
+            <section class="main-section" id="Loops">
+                <header>Loops</header>
+                <p>You may encounter situations, when a block of code needs to be executed several number of times. In general, statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on.
+                Programming languages provide various control structures that allow for more complicated execution paths.
+                A loop statement allows us to execute a statement or group of statements multiple times.</p>
+                <p>Types of loops present in C language:</p>
+                <ol>
+                    <li>while loop</li>
+                    <li>for loop</li>
+                    <li>do...while loop</li>
+                </ol>
+                <h4>while loop</h4>
+                <h4>The syntax is as follows:</h4>
+                    <pre>
+                        <code>
+ while(condition) {
+ statement(s);
+ }
+                        </code>
+                    </pre>
+                <h4>Example: </h4>
+                    <pre>
+                        <code>
+ #include &lt;stdio.h&gt;
+
+ int main () {
+
+     /* local variable definition */
+     int a = 10;
+
+     /* while loop execution */
+     while( a < 20 ) {
+         printf("value of a: %d\n", a);
+         a++;
+     }
+
+     return 0;
+ }
+                        </code>
+                    </pre>
+                <h4>for loop</h4>
+                <h4>The syntax is as follows:</h4>
+                    <pre>
+                        <code>
+ for ( init; condition; increment ) {
+ statement(s);
+ }
+                        </code>
+                    </pre>
+                <h4>Example: </h4>
+                    <pre>
+                        <code>
+ #include &lt;stdio.h&gt;
+
+ int main () {
+
+     int a;
+
+     /* for loop execution */
+     for( a = 10; a < 20; a = a + 1 ){
+         printf("value of a: %d\n", a);
+     }
+
+     return 0;
+ }
+                        </code>
+                    </pre>
+                <h4>do..while loop</h4>
+                <h4>The syntax is as follows:</h4>
+                    <pre>
+                        <code>
+ do {
+ statement(s);
+ } while( condition );
+                        </code>
+                    </pre>
+                <h4>Example: </h4>
+                    <pre>
+                        <code>
+ #include <stdio.h>
+
+ int main () {
+
+     /* local variable definition */
+     int a = 10;
+
+     /* do loop execution */
+     do {
+         printf("value of a: %d\n", a);
+         a = a + 1;
+     }while( a < 20 );
+
+     return 0;
+ }
+                        </code>
+                    </pre>
+            <section class="main-section" id="Functions">
+                <header>Functions</header>
+                <p>A function is a block of code that performs a specific task.
+
+                Dividing a complex problem into smaller chunks makes our program easy to understand and reuse.</p>
+
+                <h4>Types of function</h4>
+                <ol>
+                    <li>Standard library functions</li>
+                    <li>User-defined functions</li>
+                </ol>
+                <h4>User-defined function</h4>
+                <p>You can also create functions as per your need. Such functions created by the user are known as user-defined functions.</p>
+
+                <h4>Syntax of User Defined Functions:</h4>
+                    <pre>
+                        <code>
+ #include &lt;stdio.h&gt;
+ void functionName()
+ {
+     ... .. ...
+     ... .. ...
+ }
+
+ int main()
+ {
+     ... .. ...
+     ... .. ...
+
+     functionName();
+
+     ... .. ...
+     ... .. ...
+ }
+                        </code>
+                    </pre>
+                <h4>An example is as follows:</h4>
+                    <pre>
+                        <code>
+ /* function returning the max between two numbers */
+ int max(int num1, int num2) {
+
+     /* local variable declaration */
+     int result;
+
+     if (num1 > num2)
+         result = num1;
+     else
+         result = num2;
+
+     return result;
+ }
+                        </code>
+                    </pre>
+            </section>
+        </main>
+    </body>
+    <script type="text/javascript">
+        const navToggle = document.querySelector('#menu-button');     // menu-button contains the hamburger menu
+        const nav = document.querySelector('#navbar');                 // navbar 
+        const navAnchorTags = document.querySelectorAll('.navbar-anchor-tags');     // navbar-anchor-tags is the class given to all anchor tags in the navbar
+
+        // This function toggles the hamburger menu button for mobile/tablet devices
+        function menuButtonFuncToggle(x){
+            x.classList.toggle("change");
+        }
+
+        // on clicking the hamburger button should display the menu based on the below even listener
+        navToggle.addEventListener("click", () => {
+            nav.classList.toggle("open-menu-button"); 
+        });
+
+
+        // on width of viewport less than 860px this event listener changes 
+        // the toggle button back to original state if it is in open state when rezized
+        window.addEventListener("resize", () => {
+            if(document.body.clientWidth > 860){
+                nav.classList.remove("open-menu-button");
+                navToggle.classList.remove("change");
+            }
+        });
+
+        // this event listener ensures that the form closes when an inpage anchor
+        // link is clicked and restores hamburger button to closed state
+        nav.addEventListener("click", () =>{
+        nav.classList.remove("open-menu-button");
+        navToggle.classList.remove("change");
+        });
+        </script>
+</html>

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background-color: #24252A;
+	font-family: "Montserrat", sans-serif;
+	color: white;
+}
+
+#video-div{
+	text-align: center;
+}
+
+p{
+	text-align: center;
+}
+
+h1, h2{
+	text-align: center;
+	color: #80bfff;
+}
+
+li, a{
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: #edf0f1;
+	text-decoration: none;
+}
+
+nav{
+	order: 1;
+}
+
+header{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 30px 10%;
+}
+
+#header-img{
+	cursor: pointer;
+	height: 70px;
+	width: 70px;
+	margin-right: auto;
+}
+
+.nav-link{
+	list-style: none;
+}
+
+.nav-link{
+	display: inline-block;
+	padding:  0px 20px;
+}
+
+nav ul li:nthchild(1){
+	padding: 0 20px 0 0;
+}
+
+nav ul li a{
+	transition: all 0.3s ease 0s;
+}
+
+nav ul li a:hover{
+	color: #0088a9;
+}
+
+#email{
+	width: 30%;
+	height: 30px;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	margin: 8px 0;
+	border: 2px solid #6666ff;
+	border-radius: 4px;
+	background-color: #f1f1f1;
+}
+
+#submit{
+	width: 20%;
+	height: 30px;
+	padding: 1px 1px;
+	box-sizing: border-box;
+	margin: 8px 0 20px;
+	background-color: #f1f1f1;
+	border:  2px solid #6666ff;
+	color: black;
+}
+
+#form{
+	text-align: center;
+}
+
+#product-cards{
+	display: flex;
+	justify-content: space-between;
+}
+
+.price{
+	color: grey;
+	font-size: 22px;
+}
+
+.cards{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	max-width: 300px;
+	margin: auto;
+	text-align: center;
+	font-family: arial;
+}
+
+.card-img{
+	max-width: 300px;
+	margin: auto;
+	text-align: center;
+	border: 3px solid black;
+}
+
+@media all and (max-width: 800px){
+	#product-cards{
+		flex-direction: column;
+	}
+}
+
+@media all and (max-width: 450px){
+	#video{
+		height: 200px;
+	}
+}
+
